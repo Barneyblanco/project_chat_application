@@ -2,7 +2,7 @@ version: "3.0"
 services: 
     client:
         container_name: client_container
-        port:
+        ports:
             - "80:80"
         restart: always
         build: ./client
@@ -11,7 +11,7 @@ services:
 
     server:
         container_name: server_container
-        port:
+        ports:
             - "5000:5000"
         restart: always
         build: ./server
