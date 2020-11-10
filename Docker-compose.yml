@@ -3,7 +3,7 @@ services:
     client:
         container_name: client_container
         port:
-            - "80:81"
+            - "80:80"
         restart: always
         build: ./client
         depends_on: 
