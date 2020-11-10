@@ -1,0 +1,17 @@
+version: "3.0"
+services: 
+    client:
+        container_name: client_container
+        port:
+            - "80:81"
+        restart: always
+        build: ./client
+        depends_on: 
+            - server
+
+    server:
+        container_name: server_container
+        port:
+            - "5000:5000"
+        restart: always
+        build: ./server
